@@ -12,7 +12,7 @@ var Queue = function() {
 
 
   someInstance.dequeue = function() {
-    while ( count > 0 ) {
+    if ( count > 0 ) {
       let dequeued = storage[1];
       delete storage[1];
       for (let key in storage) {

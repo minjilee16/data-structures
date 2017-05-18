@@ -19,7 +19,7 @@ stackMethods.push = function (value) {
 };
 
 stackMethods.pop = function () {
-  while ( this.count > 0 ) {
+  if ( this.count > 0 ) {
     var popped = this.storage[this.count];
     delete this.storage[this.count];
     this.count--;

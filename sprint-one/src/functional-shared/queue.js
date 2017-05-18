@@ -26,7 +26,7 @@ queueMethods.enqueue = function (value) {
 
 
 queueMethods.dequeue = function () {
-  while ( this.count > 0 ) {
+  if ( this.count > 0 ) {
     var dequeued = this.storage[1];
     delete this.storage[1];
     for (var key in this.storage) {

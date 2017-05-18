@@ -11,7 +11,7 @@ Stack.prototype.push = function(value) {
 };
 
 Stack.prototype.pop = function() {
-  while ( this.count > 0 ) {  
+  if ( this.count > 0 ) {  
     var popped = this.storage[this.count];
     delete popped;
     this.count--;
