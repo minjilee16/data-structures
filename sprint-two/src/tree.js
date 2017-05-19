@@ -28,14 +28,14 @@ treeMethods.addChild = function(value) {
 treeMethods.contains = function(target) {
   // console.log('value', this.value);
   // console.log('target', target);
-  if (this.children !== null) {
-    for (var i = 0; i < this.children.length; i++) {
-      if (this.value === target) {
-        return true;
-      }  
-      this.children[i].contains(target);
-    } 
-  }
+  if (this.value === target) {
+    return true;
+  }   
+  for (var i = 0; i < this.children.length; i++) {
+    if (this.children[i].contains(target)) {
+      return true;
+    }
+  } 
   return false;
 };
 
