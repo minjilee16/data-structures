@@ -19,10 +19,12 @@ var LimitedArray = function(limit) {
     checkLimit(index);
     return storage[index];
   };
+
   limitedArray.set = function(index, value) {
     checkLimit(index);
     storage[index] = value;
   };
+
   limitedArray.each = function(callback) {
     for (var i = 0; i < storage.length; i++) {
       callback(storage[i], i, storage);
@@ -41,6 +43,8 @@ var LimitedArray = function(limit) {
   return limitedArray;
 };
 
+
+
 // This is a "hashing function". You don't need to worry about it, just use it
 // to turn any string into an integer that is well-distributed between the
 // numbers 0 and `max`
@@ -53,6 +57,7 @@ var getIndexBelowMaxForKey = function(str, max) {
   }
   return hash % max;
 };
+
 
 /*
  * Complexity: What is the time complexity of the above functions?

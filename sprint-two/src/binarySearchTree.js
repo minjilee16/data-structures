@@ -14,7 +14,7 @@ BinarySearchTree.insert = function (value) {
   //  else
   //    add to the left of the node
   // console.log(this.right);
-  console.log(this.tree);
+  // console.log(this.tree);
   if ( this.tree.value > value ) {
     this.tree.right = value; 
   } else {
@@ -38,8 +38,8 @@ BinarySearchTree.contains = function (value) {
 BinarySearchTree.depthFirstLog = function () {
 };
 
-var binarySearchTree = BinarySearchTree();
-binarySearchTree.insert(5);
+// var binarySearchTree = BinarySearchTree();
+// binarySearchTree.insert(5);
 // console.log(binarySearchTree);
 // console.log(binarySearchTree);
 
