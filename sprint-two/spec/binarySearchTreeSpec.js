@@ -13,16 +13,23 @@ describe('binarySearchTree', function() {
 
   it('should insert values at the correct location in the tree', function() {
     binarySearchTree.insert(2);
+  // console.log('binarySearchTree 1 ',binarySearchTree);
     binarySearchTree.insert(3);
+// console.log('binarySearchTree 2 ',binarySearchTree);
     binarySearchTree.insert(7);
+// console.log('binarySearchTree 3 ',binarySearchTree);
     binarySearchTree.insert(6);
+    // console.log('binarySearchTree', binarySearchTree);
     expect(binarySearchTree.left.right.value).to.equal(3);
     expect(binarySearchTree.right.left.value).to.equal(6);
   });
 
   it('should have a working "contains" method', function() {
     binarySearchTree.insert(2);
+// console.log(binarySearchTree.contains(2))
     binarySearchTree.insert(3);
+// console.log(binarySearchTree.contains(3))
+
     binarySearchTree.insert(7);
     expect(binarySearchTree.contains(7)).to.equal(true);
     expect(binarySearchTree.contains(8)).to.equal(false);

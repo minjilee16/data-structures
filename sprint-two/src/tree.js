@@ -3,20 +3,12 @@ var Tree = function(value) {
   newTree.value = value;
   
   newTree.children = [];  
-  extend(newTree, treeMethods);
   //add child method extended into Tree
   return newTree;
 };
 
 var treeMethods = {};
 
-var extend = function(to, from) {
-  for (var key in from) { 
-    if (from[key] === undefined) {
-      to[key] = from[key];
-    }
-  }
-};
 
 treeMethods.addChild = function(value) {
   //make a new node with the given value
@@ -39,23 +31,9 @@ treeMethods.contains = function(target) {
   return false;
 };
 
-      
-      // // console.log(this .children[i].value);
-      // if (this.children[i].value !== target && this.children[i].children) {
-      //   this.children[i].contains(target);
-      // } else if (this.children[i].value === target) {
-      //   return true;
-      // }
-
-
-var tree = new Tree(4);
+var tree = Tree;
 tree.addChild(5);
-tree.addChild(6);
-tree.children[0].addChild(7);
-tree.children[1].addChild(8);
-tree.contains(7);
-tree.contains(8);
-
+console.log(tree);
 /*
  * Complexity: What is the time complexity of the above functions?
  */
